@@ -7,8 +7,10 @@ specifiers:
   '@vue/cli-plugin-vuex': ~4.5.0
   '@vue/cli-service': ~4.5.0
   '@vue/eslint-config-standard': ^5.1.2
+  axios: ^0.18.0
   babel-eslint: ^10.1.0
   core-js: ^3.6.5
+  element-ui: ^2.4.5
   eslint: ^6.7.2
   eslint-plugin-import: ^2.20.2
   eslint-plugin-node: ^11.1.0
@@ -16,14 +18,20 @@ specifiers:
   eslint-plugin-standard: ^4.0.0
   eslint-plugin-vue: ^6.2.2
   node-sass: ^4.12.0
+  normalize.css: ^8.0.1
   sass-loader: ^8.0.2
   vue: ^2.6.11
+  vue-cli-plugin-axios: ^0.0.4
+  vue-cli-plugin-element: ^1.0.1
+  vue-cli-plugin-windicss: ^1.1.2
   vue-router: ^3.2.0
   vue-template-compiler: ^2.6.11
   vuex: ^3.4.0
 
 dependencies:
   core-js: registry.npmmirror.com/core-js/3.20.0
+  element-ui: registry.npmmirror.com/element-ui/2.15.6_vue@2.6.14
+  normalize.css: registry.npmmirror.com/normalize.css/8.0.1
   vue: registry.npmmirror.com/vue/2.6.14
   vue-router: registry.npmmirror.com/vue-router/3.5.3
   vuex: registry.npmmirror.com/vuex/3.6.2_vue@2.6.14
@@ -35,6 +43,7 @@ devDependencies:
   '@vue/cli-plugin-vuex': registry.npmmirror.com/@vue/cli-plugin-vuex/4.5.15_@vue+cli-service@4.5.15
   '@vue/cli-service': registry.npmmirror.com/@vue/cli-service/4.5.15_0f25d1aa8415e98c3e62a4178f3c555d
   '@vue/eslint-config-standard': registry.npmmirror.com/@vue/eslint-config-standard/5.1.2_fb5bbda1ac94ec9cd6b3c1c81ce0def2
+  axios: registry.npmmirror.com/axios/0.18.1
   babel-eslint: registry.npmmirror.com/babel-eslint/10.1.0_eslint@6.8.0
   eslint: registry.npmmirror.com/eslint/6.8.0
   eslint-plugin-import: registry.npmmirror.com/eslint-plugin-import/2.25.3_eslint@6.8.0
@@ -44,9 +53,20 @@ devDependencies:
   eslint-plugin-vue: registry.npmmirror.com/eslint-plugin-vue/6.2.2_eslint@6.8.0
   node-sass: registry.npmmirror.com/node-sass/4.14.1
   sass-loader: registry.npmmirror.com/sass-loader/8.0.2_node-sass@4.14.1
+  vue-cli-plugin-axios: registry.npmmirror.com/vue-cli-plugin-axios/0.0.4
+  vue-cli-plugin-element: registry.npmmirror.com/vue-cli-plugin-element/1.0.1
+  vue-cli-plugin-windicss: registry.npmmirror.com/vue-cli-plugin-windicss/1.1.2_@vue+cli-service@4.5.15
   vue-template-compiler: registry.npmmirror.com/vue-template-compiler/2.6.14
 
 packages:
+
+  registry.nlark.com/@antfu/utils/0.3.0:
+    resolution: {integrity: sha1-YwbEO1Kog72Olz4+2N1kJIQYvMQ=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/@antfu/utils/download/@antfu/utils-0.3.0.tgz}
+    name: '@antfu/utils'
+    version: 0.3.0
+    dependencies:
+      '@types/throttle-debounce': registry.npmmirror.com/@types/throttle-debounce/2.1.0
+    dev: true
 
   registry.nlark.com/@babel/helper-validator-identifier/7.15.7:
     resolution: {integrity: sha1-Ig35k7/pBKSmsCq08zhaXr9uI4k=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/@babel/helper-validator-identifier/download/@babel/helper-validator-identifier-7.15.7.tgz}
@@ -261,6 +281,23 @@ packages:
     name: '@nodelib/fs.stat'
     version: 1.1.3
     engines: {node: '>= 6'}
+    dev: true
+
+  registry.nlark.com/@nodelib/fs.stat/2.0.5:
+    resolution: {integrity: sha1-W9Jir5Tp0lvR5xsF3u1Eh2oiLos=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/@nodelib/fs.stat/download/@nodelib/fs.stat-2.0.5.tgz}
+    name: '@nodelib/fs.stat'
+    version: 2.0.5
+    engines: {node: '>= 8'}
+    dev: true
+
+  registry.nlark.com/@nodelib/fs.walk/1.2.8:
+    resolution: {integrity: sha1-6Vc36LtnRt3t9pxVaVNJTxlv5po=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/@nodelib/fs.walk/download/@nodelib/fs.walk-1.2.8.tgz}
+    name: '@nodelib/fs.walk'
+    version: 1.2.8
+    engines: {node: '>= 8'}
+    dependencies:
+      '@nodelib/fs.scandir': registry.npmmirror.com/@nodelib/fs.scandir/2.1.5
+      fastq: registry.nlark.com/fastq/1.13.0
     dev: true
 
   registry.nlark.com/@soda/get-current-script/1.0.2:
@@ -878,6 +915,12 @@ packages:
     engines: {node: '>= 4.5.0'}
     hasBin: true
     dev: true
+
+  registry.nlark.com/babel-helper-vue-jsx-merge-props/2.0.3:
+    resolution: {integrity: sha1-Iq69OzOQIyjlEyk6jkmSs4T58bY=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/babel-helper-vue-jsx-merge-props/download/babel-helper-vue-jsx-merge-props-2.0.3.tgz}
+    name: babel-helper-vue-jsx-merge-props
+    version: 2.0.3
+    dev: false
 
   registry.nlark.com/babel-plugin-dynamic-import-node/2.3.3:
     resolution: {integrity: sha1-hP2hnJduxcbe/vV/lCez3vZuF6M=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/babel-plugin-dynamic-import-node/download/babel-plugin-dynamic-import-node-2.3.3.tgz}
@@ -1639,7 +1682,6 @@ packages:
     name: deepmerge
     version: 1.5.2
     engines: {node: '>=0.10.0'}
-    dev: true
 
   registry.nlark.com/defaults/1.0.3:
     resolution: {integrity: sha1-xlYFHpgX2f8I7YgUd/P+QBnz730=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/defaults/download/defaults-1.0.3.tgz}
@@ -2241,6 +2283,19 @@ packages:
       micromatch: registry.nlark.com/micromatch/3.1.10
     dev: true
 
+  registry.nlark.com/fast-glob/3.2.7:
+    resolution: {integrity: sha1-/Wy3otfpqnp4RhEehaGW1rL3ZqE=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/fast-glob/download/fast-glob-3.2.7.tgz}
+    name: fast-glob
+    version: 3.2.7
+    engines: {node: '>=8'}
+    dependencies:
+      '@nodelib/fs.stat': registry.nlark.com/@nodelib/fs.stat/2.0.5
+      '@nodelib/fs.walk': registry.nlark.com/@nodelib/fs.walk/1.2.8
+      glob-parent: registry.npmmirror.com/glob-parent/5.1.2
+      merge2: registry.nlark.com/merge2/1.4.1
+      micromatch: registry.nlark.com/micromatch/4.0.4
+    dev: true
+
   registry.nlark.com/fast-json-stable-stringify/2.1.0:
     resolution: {integrity: sha1-h0v2nG9ATCtdmcSBNBOZ/VWJJjM=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/fast-json-stable-stringify/download/fast-json-stable-stringify-2.1.0.tgz}
     name: fast-json-stable-stringify
@@ -2251,6 +2306,14 @@ packages:
     resolution: {integrity: sha1-PYpcZog6FqMMqGQ+hR8Zuqd5eRc=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/fast-levenshtein/download/fast-levenshtein-2.0.6.tgz}
     name: fast-levenshtein
     version: 2.0.6
+    dev: true
+
+  registry.nlark.com/fastq/1.13.0:
+    resolution: {integrity: sha1-YWdg+Ip1Jr38WWt8q4wYk4w2uYw=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/fastq/download/fastq-1.13.0.tgz?cache=0&sync_timestamp=1631610112335&other_urls=https%3A%2F%2Fregistry.nlark.com%2Ffastq%2Fdownload%2Ffastq-1.13.0.tgz}
+    name: fastq
+    version: 1.13.0
+    dependencies:
+      reusify: registry.nlark.com/reusify/1.0.4
     dev: true
 
   registry.nlark.com/faye-websocket/0.11.4:
@@ -3100,6 +3163,13 @@ packages:
     version: 1.1.6
     dev: true
 
+  registry.nlark.com/is-buffer/2.0.5:
+    resolution: {integrity: sha1-68JS5ADSL/jXf6CYiIIaJKZYwZE=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/is-buffer/download/is-buffer-2.0.5.tgz}
+    name: is-buffer
+    version: 2.0.5
+    engines: {node: '>=4'}
+    dev: true
+
   registry.nlark.com/is-callable/1.2.4:
     resolution: {integrity: sha1-RzAdWN0CWUB4ZVR4U99tYf5HGUU=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/is-callable/download/is-callable-1.2.4.tgz}
     name: is-callable
@@ -3656,6 +3726,14 @@ packages:
       yallist: registry.nlark.com/yallist/3.1.1
     dev: true
 
+  registry.nlark.com/magic-string/0.25.7:
+    resolution: {integrity: sha1-P0l9b9NMZpxnmNy4IfLvMfVEUFE=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/magic-string/download/magic-string-0.25.7.tgz}
+    name: magic-string
+    version: 0.25.7
+    dependencies:
+      sourcemap-codec: registry.nlark.com/sourcemap-codec/1.4.8
+    dev: true
+
   registry.nlark.com/make-dir/2.1.0:
     resolution: {integrity: sha1-XwMQ4YuL6JjMBwCSlaMK5B6R5vU=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/make-dir/download/make-dir-2.1.0.tgz}
     name: make-dir
@@ -4045,6 +4123,12 @@ packages:
     version: 3.3.0
     engines: {node: '>=6'}
     dev: true
+
+  registry.nlark.com/normalize-wheel/1.0.1:
+    resolution: {integrity: sha1-rsiGr/2wRQcNhWRH32Ls+GFG7EU=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/normalize-wheel/download/normalize-wheel-1.0.1.tgz}
+    name: normalize-wheel
+    version: 1.0.1
+    dev: false
 
   registry.nlark.com/nth-check/1.0.2:
     resolution: {integrity: sha1-sr0pXDfj3VijvwcAN2Zjuk2c8Fw=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/nth-check/download/nth-check-1.0.2.tgz}
@@ -4876,6 +4960,12 @@ packages:
     version: 2.2.0
     dev: true
 
+  registry.nlark.com/queue-microtask/1.2.3:
+    resolution: {integrity: sha1-SSkii7xyTfrEPg77BYyve2z7YkM=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/queue-microtask/download/queue-microtask-1.2.3.tgz}
+    name: queue-microtask
+    version: 1.2.3
+    dev: true
+
   registry.nlark.com/randombytes/2.1.0:
     resolution: {integrity: sha1-32+ENy8CcNxlzfYpE0mrekc9Tyo=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/randombytes/download/randombytes-2.1.0.tgz}
     name: randombytes
@@ -4994,6 +5084,12 @@ packages:
     version: 1.4.2
     dev: true
 
+  registry.nlark.com/regenerator-runtime/0.11.1:
+    resolution: {integrity: sha1-vgWtf5v30i4Fb5cmzuUBf78Z4uk=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/regenerator-runtime/download/regenerator-runtime-0.11.1.tgz}
+    name: regenerator-runtime
+    version: 0.11.1
+    dev: false
+
   registry.nlark.com/regenerator-runtime/0.13.9:
     resolution: {integrity: sha1-iSV0Kpj/2QgUmI11Zq0wyjsmO1I=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/regenerator-runtime/download/regenerator-runtime-0.13.9.tgz}
     name: regenerator-runtime
@@ -5090,6 +5186,12 @@ packages:
     version: 1.0.0
     dev: true
 
+  registry.nlark.com/resize-observer-polyfill/1.5.1:
+    resolution: {integrity: sha1-DpAg3T0hAkRY1OvSfiPkAmmBBGQ=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/resize-observer-polyfill/download/resize-observer-polyfill-1.5.1.tgz}
+    name: resize-observer-polyfill
+    version: 1.5.1
+    dev: false
+
   registry.nlark.com/resolve-cwd/2.0.0:
     resolution: {integrity: sha1-AKn3OHVW4nA46uIyyqNypqWbZlo=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/resolve-cwd/download/resolve-cwd-2.0.0.tgz}
     name: resolve-cwd
@@ -5156,6 +5258,13 @@ packages:
     engines: {node: '>= 4'}
     dev: true
 
+  registry.nlark.com/reusify/1.0.4:
+    resolution: {integrity: sha1-kNo4Kx4SbvwCFG6QhFqI2xKSXXY=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/reusify/download/reusify-1.0.4.tgz}
+    name: reusify
+    version: 1.0.4
+    engines: {iojs: '>=1.0.0', node: '>=0.10.0'}
+    dev: true
+
   registry.nlark.com/rgb-regex/1.0.1:
     resolution: {integrity: sha1-wODWiC3w4jviVKR16O3UGRX+rrE=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/rgb-regex/download/rgb-regex-1.0.1.tgz}
     name: rgb-regex
@@ -5182,6 +5291,14 @@ packages:
     name: run-async
     version: 2.4.1
     engines: {node: '>=0.12.0'}
+    dev: true
+
+  registry.nlark.com/run-parallel/1.2.0:
+    resolution: {integrity: sha1-ZtE2jae9+SHrnZW9GpIp5/IaQ+4=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/run-parallel/download/run-parallel-1.2.0.tgz}
+    name: run-parallel
+    version: 1.2.0
+    dependencies:
+      queue-microtask: registry.nlark.com/queue-microtask/1.2.3
     dev: true
 
   registry.nlark.com/run-queue/1.0.3:
@@ -5516,6 +5633,12 @@ packages:
     engines: {node: '>= 8'}
     dev: true
 
+  registry.nlark.com/sourcemap-codec/1.4.8:
+    resolution: {integrity: sha1-6oBL2UhXQC5pktBaOO8a41qatMQ=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/sourcemap-codec/download/sourcemap-codec-1.4.8.tgz}
+    name: sourcemap-codec
+    version: 1.4.8
+    dev: true
+
   registry.nlark.com/spdx-correct/3.1.1:
     resolution: {integrity: sha1-3s6BrJweZxPl99G28X1Gj6U9iak=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/spdx-correct/download/spdx-correct-3.1.1.tgz}
     name: spdx-correct
@@ -5771,6 +5894,13 @@ packages:
       neo-async: registry.nlark.com/neo-async/2.6.2
       webpack: registry.npmmirror.com/webpack/4.46.0
     dev: true
+
+  registry.nlark.com/throttle-debounce/1.1.0:
+    resolution: {integrity: sha1-UYU9o3vmihVctugns1FKPEIuic0=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/throttle-debounce/download/throttle-debounce-1.1.0.tgz}
+    name: throttle-debounce
+    version: 1.1.0
+    engines: {node: '>=4'}
+    dev: false
 
   registry.nlark.com/through/2.3.8:
     resolution: {integrity: sha1-DdTJ/6q8NXlgsbckEV1+Doai4fU=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/through/download/through-2.3.8.tgz}
@@ -6039,6 +6169,13 @@ packages:
     engines: {node: '>=4'}
     dev: true
 
+  registry.nlark.com/upath/2.0.1:
+    resolution: {integrity: sha1-UMc96mjW9rmQ9R0nnOYIFmXWGos=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/upath/download/upath-2.0.1.tgz}
+    name: upath
+    version: 2.0.1
+    engines: {node: '>=4'}
+    dev: true
+
   registry.nlark.com/upper-case/1.1.3:
     resolution: {integrity: sha1-9rRQHC7EzdJrp4vnIilh3ndiFZg=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/upper-case/download/upper-case-1.1.3.tgz}
     name: upper-case
@@ -6163,16 +6300,6 @@ packages:
     version: 1.9.1
     dev: true
 
-  registry.nlark.com/watchpack-chokidar2/2.0.1:
-    resolution: {integrity: sha1-OFAAcu5uzmbzdpk2lQ6hdxvhyVc=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/watchpack-chokidar2/download/watchpack-chokidar2-2.0.1.tgz}
-    name: watchpack-chokidar2
-    version: 2.0.1
-    requiresBuild: true
-    dependencies:
-      chokidar: registry.npmmirror.com/chokidar/2.1.8
-    dev: true
-    optional: true
-
   registry.nlark.com/wbuf/1.7.3:
     resolution: {integrity: sha1-wdjRSTFtPqhShIiVy2oL/oh7h98=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/wbuf/download/wbuf-1.7.3.tgz}
     name: wbuf
@@ -6205,6 +6332,12 @@ packages:
     version: 4.2.2
     dependencies:
       lodash: registry.npmmirror.com/lodash/4.17.21
+    dev: true
+
+  registry.nlark.com/webpack-virtual-modules/0.4.3:
+    resolution: {integrity: sha1-zVl8bVHVpey0c+6hmDpY+ooX3tk=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/webpack-virtual-modules/download/webpack-virtual-modules-0.4.3.tgz}
+    name: webpack-virtual-modules
+    version: 0.4.3
     dev: true
 
   registry.nlark.com/websocket-driver/0.7.4:
@@ -7669,6 +7802,16 @@ packages:
       glob-to-regexp: registry.nlark.com/glob-to-regexp/0.3.0
     dev: true
 
+  registry.npmmirror.com/@nodelib/fs.scandir/2.1.5:
+    resolution: {integrity: sha1-dhnC6yGyVIP20WdUi0z9WnSIw9U=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@nodelib/fs.scandir/download/@nodelib/fs.scandir-2.1.5.tgz}
+    name: '@nodelib/fs.scandir'
+    version: 2.1.5
+    engines: {node: '>= 8'}
+    dependencies:
+      '@nodelib/fs.stat': registry.nlark.com/@nodelib/fs.stat/2.0.5
+      run-parallel: registry.nlark.com/run-parallel/1.2.0
+    dev: true
+
   registry.npmmirror.com/@soda/friendly-errors-webpack-plugin/1.8.1_webpack@4.46.0:
     resolution: {integrity: sha512-h2ooWqP8XuFqTXT+NyAFbrArzfQA7R6HTezADrvD9Re8fxMLTPPniLdqVTdDaO0eIoLaAwKT+d6w+5GeTk7Vbg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@soda/friendly-errors-webpack-plugin/download/@soda/friendly-errors-webpack-plugin-1.8.1.tgz}
     id: registry.npmmirror.com/@soda/friendly-errors-webpack-plugin/1.8.1
@@ -7822,6 +7965,12 @@ packages:
     resolution: {integrity: sha1-uUpDkchWZse3Mpn9OtedT6pDUxA=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@types/tapable/download/@types/tapable-1.0.8.tgz}
     name: '@types/tapable'
     version: 1.0.8
+    dev: true
+
+  registry.npmmirror.com/@types/throttle-debounce/2.1.0:
+    resolution: {integrity: sha1-HD32JL/Eti+ZLTASuExW1B6rN3Y=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@types/throttle-debounce/download/@types/throttle-debounce-2.1.0.tgz}
+    name: '@types/throttle-debounce'
+    version: 2.1.0
     dev: true
 
   registry.npmmirror.com/@types/uglify-js/3.13.1:
@@ -8162,6 +8311,34 @@ packages:
       - webpack
     dev: true
 
+  registry.npmmirror.com/@windicss/config/1.5.4:
+    resolution: {integrity: sha512-muRPFulqh7nU3VrsPb5+k6ulNyiw8VGg62zAWRZIBfeCRXZb2gV1Q8a/tPn8X1T/+HTt4f/1bzFiusqMKscmlw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@windicss/config/download/@windicss/config-1.5.4.tgz}
+    name: '@windicss/config'
+    version: 1.5.4
+    dependencies:
+      debug: registry.npmmirror.com/debug/4.3.3
+      jiti: registry.npmmirror.com/jiti/1.12.9
+      windicss: registry.npmmirror.com/windicss/3.4.0
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
+  registry.npmmirror.com/@windicss/plugin-utils/1.5.4:
+    resolution: {integrity: sha512-fS4y52OYB9rIzEUolIWIrrHYuaQfcqTaX3ISbFUiNbvNgH97JATjzB2iOnNqWNy6pH3M8RP0TqYQOOCCeanDoA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@windicss/plugin-utils/download/@windicss/plugin-utils-1.5.4.tgz}
+    name: '@windicss/plugin-utils'
+    version: 1.5.4
+    dependencies:
+      '@antfu/utils': registry.nlark.com/@antfu/utils/0.3.0
+      '@windicss/config': registry.npmmirror.com/@windicss/config/1.5.4
+      debug: registry.npmmirror.com/debug/4.3.3
+      fast-glob: registry.nlark.com/fast-glob/3.2.7
+      magic-string: registry.nlark.com/magic-string/0.25.7
+      micromatch: registry.nlark.com/micromatch/4.0.4
+      windicss: registry.npmmirror.com/windicss/3.4.0
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
   registry.npmmirror.com/accepts/1.3.7:
     resolution: {integrity: sha1-UxvHJlF6OytB+FACHGzBXqq1B80=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/accepts/download/accepts-1.3.7.tgz}
     name: accepts
@@ -8281,6 +8458,14 @@ packages:
       util: registry.nlark.com/util/0.10.3
     dev: true
 
+  registry.npmmirror.com/async-validator/1.8.5:
+    resolution: {integrity: sha1-3D4I7B/Q3dtn5ghC8CwM0c7G1/A=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/async-validator/download/async-validator-1.8.5.tgz}
+    name: async-validator
+    version: 1.8.5
+    dependencies:
+      babel-runtime: registry.npmmirror.com/babel-runtime/6.26.0
+    dev: false
+
   registry.npmmirror.com/async/2.6.3:
     resolution: {integrity: sha1-1yYl4jRKNlbjo61Pp0n6gymdgv8=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/async/download/async-2.6.3.tgz}
     name: async
@@ -8314,6 +8499,16 @@ packages:
     resolution: {integrity: sha1-1h9G2DslGSUOJ4Ta9bCUeai0HFk=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/aws4/download/aws4-1.11.0.tgz}
     name: aws4
     version: 1.11.0
+    dev: true
+
+  registry.npmmirror.com/axios/0.18.1:
+    resolution: {integrity: sha512-0BfJq4NSfQXd+SkFdrvFbG7addhYSBA2mQwISr46pD6E5iqkWg02RAs8vyTT/j0RTnoYmeXauBuSv1qKwR179g==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/axios/download/axios-0.18.1.tgz}
+    name: axios
+    version: 0.18.1
+    deprecated: Critical security vulnerability fixed in v0.21.1. For more information, see https://github.com/axios/axios/pull/3410
+    dependencies:
+      follow-redirects: registry.npmmirror.com/follow-redirects/1.5.10
+      is-buffer: registry.nlark.com/is-buffer/2.0.5
     dev: true
 
   registry.npmmirror.com/babel-eslint/10.1.0_eslint@6.8.0:
@@ -8399,6 +8594,15 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
+
+  registry.npmmirror.com/babel-runtime/6.26.0:
+    resolution: {integrity: sha1-llxwWGaOgrVde/4E/yM3vItWR/4=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/babel-runtime/download/babel-runtime-6.26.0.tgz}
+    name: babel-runtime
+    version: 6.26.0
+    dependencies:
+      core-js: registry.npmmirror.com/core-js/2.6.12
+      regenerator-runtime: registry.nlark.com/regenerator-runtime/0.11.1
+    dev: false
 
   registry.npmmirror.com/bcrypt-pbkdf/1.0.2:
     resolution: {integrity: sha1-pDAdOJtqQ/m2f/PKEaP2Y342Dp4=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/bcrypt-pbkdf/download/bcrypt-pbkdf-1.0.2.tgz}
@@ -8692,7 +8896,7 @@ packages:
     dev: true
 
   registry.npmmirror.com/chokidar/3.5.2:
-    resolution: {integrity: sha1-26OXb8rbAW9m/TZQIdkWANAcHnU=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/chokidar/download/chokidar-3.5.2.tgz}
+    resolution: {integrity: sha1-26OXb8rbAW9m/TZQIdkWANAcHnU=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/chokidar/download/chokidar-3.5.2.tgz?cache=0&sync_timestamp=1636462322114&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fchokidar%2Fdownload%2Fchokidar-3.5.2.tgz}
     name: chokidar
     version: 3.5.2
     engines: {node: '>= 8.10.0'}
@@ -8882,6 +9086,14 @@ packages:
       browserslist: registry.npmmirror.com/browserslist/4.19.1
       semver: registry.nlark.com/semver/7.0.0
     dev: true
+
+  registry.npmmirror.com/core-js/2.6.12:
+    resolution: {integrity: sha1-2TM9+nsGXjR8xWgiGdb2kIWcwuw=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/core-js/download/core-js-2.6.12.tgz}
+    name: core-js
+    version: 2.6.12
+    deprecated: core-js@<3.3 is no longer maintained and not recommended for usage due to the number of issues. Because of the V8 engine whims, feature detection in old core-js versions could cause a slowdown up to 100x even if nothing is polyfilled. Please, upgrade your dependencies to the actual version of core-js.
+    requiresBuild: true
+    dev: false
 
   registry.npmmirror.com/core-js/3.20.0:
     resolution: {integrity: sha512-KjbKU7UEfg4YPpskMtMXPhUKn7m/1OdTHTVjy09ScR2LVaoUXe8Jh0UdvN2EKUR6iKTJph52SJP95mAB0MnVLQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/core-js/download/core-js-3.20.0.tgz}
@@ -9078,6 +9290,14 @@ packages:
       ms: registry.npmmirror.com/ms/2.0.0
     dev: true
 
+  registry.npmmirror.com/debug/3.1.0:
+    resolution: {integrity: sha1-W7WgZyYotkFJVmuhaBnmFRjGcmE=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/debug/download/debug-3.1.0.tgz}
+    name: debug
+    version: 3.1.0
+    dependencies:
+      ms: registry.npmmirror.com/ms/2.0.0
+    dev: true
+
   registry.npmmirror.com/debug/3.2.7:
     resolution: {integrity: sha1-clgLfpFF+zm2Z2+cXl+xALk0F5o=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/debug/download/debug-3.2.7.tgz}
     name: debug
@@ -9142,6 +9362,12 @@ packages:
       execa: registry.npmmirror.com/execa/3.4.0
     dev: true
 
+  registry.npmmirror.com/defu/4.0.1:
+    resolution: {integrity: sha1-nX16SPkpXwgoXRU9z/F0yJubyyI=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/defu/download/defu-4.0.1.tgz}
+    name: defu
+    version: 4.0.1
+    dev: true
+
   registry.npmmirror.com/delegates/1.0.0:
     resolution: {integrity: sha1-hMbhWbgZBP3KWaDvRM2HDTElD5o=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/delegates/download/delegates-1.0.0.tgz}
     name: delegates
@@ -9200,6 +9426,23 @@ packages:
     name: electron-to-chromium
     version: 1.4.24
     dev: true
+
+  registry.npmmirror.com/element-ui/2.15.6_vue@2.6.14:
+    resolution: {integrity: sha512-rcYXEKd/j2G0AgficAOk1Zd1AsnHRkhmrK4yLHmNOiimU2JfsywgfKUjMoFuT6pQx0luhovj8lFjpE4Fnt58Iw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/element-ui/download/element-ui-2.15.6.tgz}
+    id: registry.npmmirror.com/element-ui/2.15.6
+    name: element-ui
+    version: 2.15.6
+    peerDependencies:
+      vue: ^2.5.17
+    dependencies:
+      async-validator: registry.npmmirror.com/async-validator/1.8.5
+      babel-helper-vue-jsx-merge-props: registry.nlark.com/babel-helper-vue-jsx-merge-props/2.0.3
+      deepmerge: registry.nlark.com/deepmerge/1.5.2
+      normalize-wheel: registry.nlark.com/normalize-wheel/1.0.1
+      resize-observer-polyfill: registry.nlark.com/resize-observer-polyfill/1.5.1
+      throttle-debounce: registry.nlark.com/throttle-debounce/1.1.0
+      vue: registry.npmmirror.com/vue/2.6.14
+    dev: false
 
   registry.npmmirror.com/emoji-regex/7.0.3:
     resolution: {integrity: sha1-kzoEBShgyF6DwSJHnEdIqOTHIVY=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/emoji-regex/download/emoji-regex-7.0.3.tgz}
@@ -9662,6 +9905,15 @@ packages:
         optional: true
     dependencies:
       debug: registry.npmmirror.com/debug/4.3.3
+    dev: true
+
+  registry.npmmirror.com/follow-redirects/1.5.10:
+    resolution: {integrity: sha1-e3qfmuov3/NnhqlP9kPtB/T/Xio=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/follow-redirects/download/follow-redirects-1.5.10.tgz}
+    name: follow-redirects
+    version: 1.5.10
+    engines: {node: '>=4.0'}
+    dependencies:
+      debug: registry.npmmirror.com/debug/3.1.0
     dev: true
 
   registry.npmmirror.com/forever-agent/0.6.1:
@@ -10158,6 +10410,13 @@ packages:
     version: 2.1.0
     dev: true
 
+  registry.npmmirror.com/jiti/1.12.9:
+    resolution: {integrity: sha1-LORbJlz8jckevXClIEgHz5FSkbw=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/jiti/download/jiti-1.12.9.tgz}
+    name: jiti
+    version: 1.12.9
+    hasBin: true
+    dev: true
+
   registry.npmmirror.com/js-base64/2.6.4:
     resolution: {integrity: sha1-9OaGxd4eofhn28rT1G2WlCjfmMQ=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/js-base64/download/js-base64-2.6.4.tgz}
     name: js-base64
@@ -10241,7 +10500,6 @@ packages:
       emojis-list: registry.nlark.com/emojis-list/3.0.0
       json5: registry.nlark.com/json5/2.2.0
     dev: true
-    optional: true
 
   registry.npmmirror.com/lodash.defaultsdeep/4.6.1:
     resolution: {integrity: sha1-US6b1yHSctlOPTpjZT+hdRZ0HKY=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/lodash.defaultsdeep/download/lodash.defaultsdeep-4.6.1.tgz}
@@ -10507,6 +10765,12 @@ packages:
       stdout-stream: registry.nlark.com/stdout-stream/1.4.1
       true-case-path: registry.nlark.com/true-case-path/1.0.3
     dev: true
+
+  registry.npmmirror.com/normalize.css/8.0.1:
+    resolution: {integrity: sha1-m5iiCHOLnMJjTKrLxC0THJdIe/M=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/normalize.css/download/normalize.css-8.0.1.tgz}
+    name: normalize.css
+    version: 8.0.1
+    dev: false
 
   registry.npmmirror.com/npm-run-path/2.0.2:
     resolution: {integrity: sha1-NakjLfo11wZ7TLLd8jV7GHFTbF8=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/npm-run-path/download/npm-run-path-2.0.2.tgz}
@@ -11742,6 +12006,33 @@ packages:
       extsprintf: registry.npmmirror.com/extsprintf/1.3.0
     dev: true
 
+  registry.npmmirror.com/vue-cli-plugin-axios/0.0.4:
+    resolution: {integrity: sha1-KdTrSCdcf+FbkuH9XZX74qlmQ28=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vue-cli-plugin-axios/download/vue-cli-plugin-axios-0.0.4.tgz}
+    name: vue-cli-plugin-axios
+    version: 0.0.4
+    dev: true
+
+  registry.npmmirror.com/vue-cli-plugin-element/1.0.1:
+    resolution: {integrity: sha1-NOWPtls2z1mvrxT1AyiOXleLFVQ=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vue-cli-plugin-element/download/vue-cli-plugin-element-1.0.1.tgz}
+    name: vue-cli-plugin-element
+    version: 1.0.1
+    dev: true
+
+  registry.npmmirror.com/vue-cli-plugin-windicss/1.1.2_@vue+cli-service@4.5.15:
+    resolution: {integrity: sha1-xVWbJorExt4dvmtTQcpMaXBHL3E=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vue-cli-plugin-windicss/download/vue-cli-plugin-windicss-1.1.2.tgz}
+    id: registry.npmmirror.com/vue-cli-plugin-windicss/1.1.2
+    name: vue-cli-plugin-windicss
+    version: 1.1.2
+    peerDependencies:
+      '@vue/cli-service': ^3.0.0 || ^4.0.0-0
+    dependencies:
+      '@vue/cli-service': registry.npmmirror.com/@vue/cli-service/4.5.15_0f25d1aa8415e98c3e62a4178f3c555d
+      defu: registry.npmmirror.com/defu/4.0.1
+      windicss-webpack-plugin: registry.npmmirror.com/windicss-webpack-plugin/1.6.0
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
   registry.npmmirror.com/vue-eslint-parser/7.11.0_eslint@6.8.0:
     resolution: {integrity: sha1-IUtd6pYQB/z/su5luJEjB2KNDa8=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vue-eslint-parser/download/vue-eslint-parser-7.11.0.tgz}
     id: registry.npmmirror.com/vue-eslint-parser/7.11.0
@@ -11838,6 +12129,16 @@ packages:
       vue: registry.npmmirror.com/vue/2.6.14
     dev: false
 
+  registry.npmmirror.com/watchpack-chokidar2/2.0.1:
+    resolution: {integrity: sha1-OFAAcu5uzmbzdpk2lQ6hdxvhyVc=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/watchpack-chokidar2/download/watchpack-chokidar2-2.0.1.tgz}
+    name: watchpack-chokidar2
+    version: 2.0.1
+    requiresBuild: true
+    dependencies:
+      chokidar: registry.npmmirror.com/chokidar/2.1.8
+    dev: true
+    optional: true
+
   registry.npmmirror.com/watchpack/1.7.5:
     resolution: {integrity: sha1-EmfmxV4Lm1vkTCAjrtVDeiwmxFM=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/watchpack/download/watchpack-1.7.5.tgz}
     name: watchpack
@@ -11847,7 +12148,7 @@ packages:
       neo-async: registry.nlark.com/neo-async/2.6.2
     optionalDependencies:
       chokidar: registry.npmmirror.com/chokidar/3.5.2
-      watchpack-chokidar2: registry.nlark.com/watchpack-chokidar2/2.0.1
+      watchpack-chokidar2: registry.npmmirror.com/watchpack-chokidar2/2.0.1
     dev: true
 
   registry.npmmirror.com/webpack-bundle-analyzer/3.9.0:
@@ -12004,6 +12305,31 @@ packages:
     version: 1.1.5
     dependencies:
       string-width: registry.npmmirror.com/string-width/4.2.3
+    dev: true
+
+  registry.npmmirror.com/windicss-webpack-plugin/1.6.0:
+    resolution: {integrity: sha512-3oK+IacPEY2aOcAqyhgEGtBAH+w6wf+FOVaBM9ZahK0g+bm4gkUm9OoB6DTSYRK7JQd03VI7LAXJOGe7mHqjMw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/windicss-webpack-plugin/download/windicss-webpack-plugin-1.6.0.tgz}
+    name: windicss-webpack-plugin
+    version: 1.6.0
+    dependencies:
+      '@windicss/plugin-utils': registry.npmmirror.com/@windicss/plugin-utils/1.5.4
+      debug: registry.npmmirror.com/debug/4.3.3
+      loader-utils: registry.npmmirror.com/loader-utils/2.0.2
+      lodash: registry.npmmirror.com/lodash/4.17.21
+      magic-string: registry.nlark.com/magic-string/0.25.7
+      upath: registry.nlark.com/upath/2.0.1
+      webpack-virtual-modules: registry.nlark.com/webpack-virtual-modules/0.4.3
+      windicss: registry.npmmirror.com/windicss/3.4.0
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
+  registry.npmmirror.com/windicss/3.4.0:
+    resolution: {integrity: sha512-X+9Y1/FPxX253Xo4Hk/qfVuvoAxgKx686Z6yHxmBFMH7wRCPdRO42na9k/yEnrW6EqCFJP/GcMIHn3QENaE42g==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/windicss/download/windicss-3.4.0.tgz}
+    name: windicss
+    version: 3.4.0
+    engines: {node: '>= 12'}
+    hasBin: true
     dev: true
 
   registry.npmmirror.com/worker-farm/1.7.0:
