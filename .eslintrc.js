@@ -1,4 +1,18 @@
 module.exports = {
+  // "eslintConfig": {
+  //   "root": true,
+  //   "env": {
+  //     "node": true
+  //   },
+  //   "extends": [
+  //     "plugin:vue/essential",
+  //     "@vue/standard"
+  //   ],
+  //   "parserOptions": {
+  //     "parser": "babel-eslint"
+  //   },
+  //   "rules": {}
+  // },
   root: true,
   env: {
     node: true
@@ -118,7 +132,7 @@ module.exports = {
     'semi': [2, 'never'],
     'semi-spacing': [2, { 'before': false, 'after': true }],
     'space-before-blocks': [2, 'always'],
-    'space-before-function-paren': [2, false],
+    // 'space-before-function-paren': [2, false],
     'space-in-parens': [2, 'never'],
     'space-infix-ops': 2,
     'space-unary-ops': [2, { 'words': true, 'nonwords': false }],
@@ -133,7 +147,7 @@ module.exports = {
     'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
     'object-curly-spacing': [2, 'always', { objectsInObjects: false }],
     'array-bracket-spacing': [2, 'never'],
-    'vue-libs/jsx-uses-vars': 2,
+    // 'vue-libs/jsx-uses-vars': 2,
     'vue/require-v-for-key': 0
   }
 }
