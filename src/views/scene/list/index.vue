@@ -1,7 +1,7 @@
 <!--
  * @Author: 仲灏<izhaong@outlook.com>🌶🌶🌶
  * @Date: 2021-12-20 15:56:18
- * @LastEditTime: 2021-12-21 09:22:35
+ * @LastEditTime: 2021-12-21 15:17:39
  * @LastEditors: 仲灏<izhaong@outlook.com>🌶🌶🌶
  * @Description:
  * @FilePath: /win10-module/src/views/scene/list/index.vue
@@ -28,13 +28,16 @@
                 <el-tab-pane label="其他" name="other"></el-tab-pane>
               </el-tabs>
             </header>
-            <main class="list_wrapper">
+            <main class="list_wrapper" v-loading="listLoading">
               <section class="flex item" v-for="(item, index) in list" :key="index">
                 <img :src="item.icon" :alt="item.title" />
                 <h3>{{ item.title }}</h3>
-                <p>是否是创建应用: {{isChecked}}</p>
+                <p>是否是创建应用: {{ isChecked }}</p>
               </section>
             </main>
+            <footer class="text-center mt-8">
+              <el-button type="primary" style="width: 200px" @click="$router.push('/scene/create')">确认</el-button>
+            </footer>
           </header>
         </section>
       </main>
@@ -44,24 +47,28 @@
 
 <script>
 export default {
-  name: 'SceneCreate',
+  name: 'SceneList',
   data () {
     return {
+      activeTab: 'all',
       q: undefined,
       isChecked: false,
-      list: [{ title: '市场商机', icon: 'test', desc: '主要针对市场商机内容组件', rate: 4, used: 999 }]，
-      
+      listLoading: false,
+      list: [{ title: '市场商机', icon: 'test', desc: '主要针对市场商机内容组件', rate: 4, used: 999 }]
     }
   },
   computed: {
+    allComps () {
+      return this.$store.getters.allComps
+    },
     appInfo () {
       return this.$store.getters.appInfo
     },
     checkList: {
-      get() {
+      get () {
         return this.$store.getters.checkList
       },
-      set(v) {
+      set (v) {
         return this.$store.commit('scene/SET_CHECKLIST', v)
       }
     }
@@ -71,9 +78,29 @@ export default {
       // 通过 `vm` 访问组件实例
     })
   },
-  created () {
+  mounted () {
     if (this.appInfo?.name) {
       this.isChecked = true
+    }
+    this.getComps()
+    this.clickTab({ name: 'all' })
+  },
+  methods: {
+    clickTab ({ name }) {
+      // todo: 防抖
+      switch (name) {
+        case 'all':
+          console.log(`click all`)
+          break
+
+        default:
+      }
+      //
+    },
+    async getComps () {
+      this.listLoading = true
+      await this.$store.dispatch('scene/getSceneComps')
+      this.listLoading = false
     }
   }
 }

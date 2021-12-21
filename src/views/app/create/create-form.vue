@@ -1,7 +1,7 @@
 <!--
  * @Author: 仲灏<izhaong@outlook.com>🌶🌶🌶
  * @Date: 2021-12-20 15:44:38
- * @LastEditTime: 2021-12-20 20:29:48
+ * @LastEditTime: 2021-12-21 13:39:42
  * @LastEditors: 仲灏<izhaong@outlook.com>🌶🌶🌶
  * @Description:
  * @FilePath: /win10-module/src/views/app/create/create-form.vue
@@ -76,7 +76,7 @@ export default {
     submitForm (formName) {
       this.$refs[formName].validate((valid) => {
         if (valid) {
-          this.$store.commit('SET_APPINFO', this.ruleForm)
+          this.$store.commit('appList/SET_APPINFO', this.ruleForm)
           this.$emit('onSuccess')
         } else {
           return false

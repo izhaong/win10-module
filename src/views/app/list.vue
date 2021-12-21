@@ -1,7 +1,7 @@
 <!--
  * @Author: 仲灏<izhaong@outlook.com>🌶🌶🌶
  * @Date: 2021-12-20 11:03:25
- * @LastEditTime: 2021-12-20 15:42:19
+ * @LastEditTime: 2021-12-21 15:06:59
  * @LastEditors: 仲灏<izhaong@outlook.com>🌶🌶🌶
  * @Description:
  * @FilePath: /win10-module/src/views/app/list.vue
@@ -54,9 +54,11 @@ export default {
       listLoading: false
     }
   },
+
   methods: {
     clickTab ({ name }) {
       console.log(name)
+      console.log(window.localStorage.getItem('Authorization'))
     },
     getAppList () {
       this.listLoading = true
