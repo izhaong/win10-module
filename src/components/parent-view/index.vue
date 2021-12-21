@@ -1,4 +1,4 @@
 
 <template>
-  <router-view />
+  <router-view class="h-full" />
 </template>
